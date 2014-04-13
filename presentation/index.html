@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Prezentare | Avangate Tech Sessions</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	    <link rel="stylesheet" href="css/reveal.css">
+	    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+	    <!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--<link rel="stylesheet" href="css/print/pdf.css">-->
+
+		<style type="text/css">
+			.reveal section img { border:none; box-shadow:none; background:none; }
+			.em2 { color:#ED9D13 !important; }
+
+			#sticky-footer {
+				display: block;
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				margin-left: -93px;
+				z-index: 20;
+			}
+			#sticky-footer div { border-radius:5px; background:white; box-shadow:1px 1px 2px 1px rgba(0, 0, 0, 0.2); padding:2px 5px; }
+			#sticky-footer span {
+				font-family: Verdana, serif;
+				font-size:10px;
+				color:black;
+			}
+			#sticky-footer img {  }
+		</style>
+	</head>
+
+	<body>
+
+<div class="reveal">
+	<div class="slides">
+
+	<section>
+		<p><img src="imgs/rw-logo.png" border="0" style="width:60%;"></p>
+		<p>Responsive Websites</p>
+	</section>
+
+	<section data-background="imgs/serban_ghita_work.jpg">
+		<div style="background-color:rgba(255,255,255,0.5); border-radius:6px;"  class="fragment"><h2>Serban Ghita</h2></div>
+
+		<div style="background-color:rgba(255,255,255,0.9); border-radius:6px;"  class="fragment">
+			<ul style="margin-top:20px; margin-bottom:20px;">
+				<li class="fragment">Senior Software Engineer</li>
+				<li class="fragment">11 ani - IT &amp; eCommerce</li>
+				<li class="fragment">2002 - primul job oficial in IT</li>
+				<li class="fragment">5+ ani - Avangate</li>
+				<li class="fragment">Website (CMS), ShoppingCart, Cpanel</li>
+				<li class="fragment">contribui la proiecte open-source</li>
+			</ul>
+
+			<p class="fragment" style="padding-bottom:20px;">Specialitati: PHP, MySQL, HTML/CSS, JavaScript</p>
+		</div>
+	</section>
+
+	<section data-background="imgs/html5-prezentare.png">
+		<div style="background-color:rgba(255,255,255,0.5); border-radius:6px;"  class="fragment">
+			<h2>Avangate Tech Sessions</h2>
+		</div>
+
+		<div style="background-color:rgba(255,255,255,0.9); border-radius:6px;"  class="fragment">
+			<h1><a href="http://www.youtube.com/watch?v=lOWV9Vo5JGI">HTML5</a></h1>
+		</div>
+	</section>
+
+	<section>
+		<h2>Agenda prezentare</h2>
+
+		<ul style="margin-top:20px; font-size:80%;">
+			<li class="fragment">Tools</li>
+			<li class="fragment">Content strategy</li>
+			<li class="fragment">Prototipare website responsive</li>
+			<li class="fragment">Constructie website responsive de la zero</li>
+			<li class="fragment">Twitter Bootstrap</li>
+			<li class="fragment">Zurb Foundation</li>
+			<li class="fragment">Mobile detection / feature detection</li>
+			<li class="fragment">Concluzii</li>
+		</ul>
+	</section>
+
+	<section data-markdown="css_media_queries.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="utf-8"></section>
+
+	<section>
+		<h3>Tools: Unit measures</h3>
+
+		<ul style="margin-top:20px; margin-bottom:20px; font-size:80%;">
+			<li class="fragment">percent: <span class="em2">width: 25%;</span></li>
+			<li class="fragment">pixels: <span class="em2">font-size: 12px;</span></li>
+			<li class="fragment">rems <i>(root elastic measurement)</i>: <span class="em2">width: 40rem;</span> <a href="http://caniuse.com/#search=rem" target="_blank">CanIUse</a>, <a href="http://jsbin.com/yabiv/1/edit" target="_blank">example</a>, <a href="http://pxtoem.com/" target="_blank">calculator</a></li>
+			<li class="fragment">ems <i>(elastic measurement units cascade)</i>: <span class="em2">padding: 1em;</span> <a href="http://jsbin.com/gigoyoli/1/edit" target="_blank">example</a></li>
+			<li class="fragment">Altele: <span class="em2">pt, cm, mm, in, pc, <a href="http://caniuse.com/viewport-units" target="_blank">vw</a></span></li>
+		</ul>
+
+		<p class="fragment">References: <a href="http://lazd.github.io/scaleable-interfaces-with-rem-units.html" target="_blank">Scalable interfaces with rem units</a>, <a href="http://goldengridsystem.com/" target="_blank">Golden Grid</a>, <a href="http://www.w3.org/Style/Examples/007/units.en.html">W3C tips on fonts sizes</a>
+
+	</section>
+
+	<section>
+		<h3>Tools: Unit measures</h3>
+
+		<ul style="margin-top:20px; margin-bottom:20px; font-size:80%;">
+			<li><span class="em2">px</span> este o masura "statica"</li>
+			<li><span class="em2">em</span> si <span class="em2">rem</span> sunt masuri relative (fluide)</li>
+			<li><span class="em2">%</span> este o masura fluida prin definitie</li>
+		</ul>
+
+		<p>Reference: <a href="http://designshack.net/articles/typography/whats-the-deal-with-em-and-rem/" target="_blank">What's the deal with em and rem?</a></p>
+
+	</section>
+
+	<section data-background="imgs/fluid_grid.png" data-markdown="css_fluid_grid.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="utf-8"></section>
+
+	<section data-background="imgs/css-breakpoints.png" data-background-size="600px">
+		<h5 style="color:white;">Tools</h5>
+		<p style="background: -webkit-linear-gradient(#B74918, #E2D03E); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'League Gothic', Impact, sans-serif; line-height: 0.9em; letter-spacing: 0.02em; text-transform: uppercase; font-size:4em;">Break points</p>
+	</section>
+
+	<section>
+		<h3>Tools: Layout breakpoints</h3>
+
+		<ul style="margin-top:20px; margin-bottom:20px; font-size:80%;">
+			<li class="fragment">20em (320px)</li>
+			<li class="fragment">30em (480px)</li>
+			<li class="fragment">37.5em (600px)</li>
+			<li class="fragment">48em (768px)</li>
+			<li class="fragment">56.25em (900px)</li>
+			<li class="fragment">68.75em (1100px)</li>
+			<li class="fragment">81.25em (1300px)</li>
+		</ul>
+
+		<p class="fragment">Reference: <a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/">http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/</a></p>
+
+	</section>
+
+	<section>
+		<h1>Content strategy</h1>
+
+		<p>Wikipedia: <i>"Content strategy refers to the planning, development, and management of content—written or in other media.
+			The term is particularly common in web development since the late 1990s."</i></p>
+	</section>
+
+	<section>
+		<h1>Prototipare website</h1>
+		<p><a href="http://www.avangate.com/docs/ro/events/HTML5-presentation/#/18" target="_blank">Mobile first</a>, <a href="http://www.adamkaplan.me/grid/" target="_blank">responsive</a>, fluid.</p>
+	</section>
+
+	<section>
+		<h1>Website de la zero</h1>
+		<p>Demo live: <a href="http://goo.gl/hwQrZi">http://goo.gl/hwQrZi</a></p>
+	</section>
+
+	<section>
+		<h1>Website + Twitter Bootstrap</h1>
+		<p>Demo live: <a href="http://goo.gl/XZUS8p">http://goo.gl/XZUS8p</a>
+	</section>
+
+	<section>
+		<h1>Website + Zurb Foundation</h1>
+		<p>Demo live: <a href="http://goo.gl/FLWQLG">http://goo.gl/FLWQLG</a></p>
+	</section>
+
+	<section>
+		<h1>Mobile detection (Server-side)</h1>
+		<p><a href="http://mobiledetect.net" target="_blank">mobiledetect.net</a></p>
+		<h1>Feature detection (Client-side)</h1>
+		<p><a href="http://modernizr.com" target="_blank">modernizr</a></p>
+	</section>
+
+	<section>
+		<h1>Concluzii</h1>
+
+		<ul style="margin-top:20px; margin-bottom:20px; font-size:80%;">
+			<li class="fragment">Folositi <span class="em2">em</span> si <span class="em2">rem</span> pentru dimensiuni.</li>
+			<li class="fragment">Folositi un layout fluid.</li>
+			<li class="fragment">Folositi un grid.</li>
+			<li class="fragment">Scoateti CSS-ul nefolosit din framework.</li>
+			<li class="fragment">Faceti strategia de continut in functie de continut si nu de marimea device-urilor din piata.</li>
+			<li class="fragment">Utilizati o solutie server-side pentru a servi pagini cat mai mici ca dimensiune.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h1>Multumesc!</h1>
+	</section>
+
+	<section>
+		<h1>Pssst ...</h1>
+		<p><a href="http://www.avangate.com/about-us/careers/">http://www.avangate.com/about-us/careers/</a></p>
+	</section>
+
+
+	</div>
+</div>
+
+
+<div id="sticky-footer">
+	<div><img src="imgs/avangate-new-logo.png" style="height:10px;"> <span>Tech Sessions @ 2014</span></div>
+</div>
+
+
+
+
+	<!-- reveal.js stuff -->
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+
+		<script>
+
+
+
+				Reveal.initialize({
+					margin: 0,
+					dependencies: [
+						{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+						{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+						{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+						{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					],
+					theme: Reveal.getQueryHash().theme,
+					center: true,
+					controls: true,
+					transition: 'concave',
+					transitionSpeed: 'fast',
+					backgroundTransition: 'linear',
+					progress: true,
+					keyboard: true,
+					history: true,
+					touch: true
+				});
+
+
+		</script>
+
+	</body>
+</html>
